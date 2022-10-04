@@ -27,7 +27,7 @@ async function post(req, res){
     product.save()
 
     res.send({
-        massage: 'success'
+        message: 'success'
     })
 }
 
@@ -37,7 +37,7 @@ async function put(req, res){
     const product = await ProductsModel.findOneAndUpdate({_id: id}, req.body, { new:true })
 
     res.send({
-        massage: 'success',
+        message: 'success',
         product
     })
     // const product = await ProductsModel.findOne({ _id: id })
